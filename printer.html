@@ -18,11 +18,11 @@
 		var data = encoder.encode(string);
 		var i;
 for (i = 0; i < 10; i++) {
- try{
+
 	 console.log("Try"+i)
 	 device.transferOut(i, data)
 		.catch(error => { console.log(error); })
- }
+ 
 }
 		
 	}
