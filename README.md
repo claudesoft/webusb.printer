@@ -15,7 +15,7 @@ This has been tested on Windows 10 hardware and on a Mac.
 Access the Demo
 ---------------
 
-1. Plug the device into your PC/Mac and open the browser to https://drffej.github.io/webusb.printer/printer.html
+1. Plug the device into your PC/Mac and open the browser to https://claudesoft.github.io/webusb.printer/printer.html
 2. Click on 'Connect' to pair the device
 3. Click on Toggle to turn on/off the Led
 
