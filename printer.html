@@ -22,7 +22,7 @@ String.prototype.toBytes = function() {
 		var string = document.getElementById("printContent").value + "\n";
 		var encoder = new TextEncoder();
 		//var data = encoder.encode(string);
-		var data = 'XXL hello world'.toBytes().concat([ 0x1b, 0x21, 0x10 ]);
+		var data = 'XXL hello world'.toBytes().concat([ 0x1b, 0x21, 0x10 , 0x0a ]); // 0x0a = LF
 		var buffer = new Uint8Array(data) //.buffer
 		console.log(data)
 		console.log(buffer)
@@ -32,12 +32,6 @@ for (i = 0; i < 10; i++) {
 
 	 console.log("Try"+i)
 	 device.transferOut(i, buffer)
-		.catch(error => { console.log(error); })
-	
-	
-	data = encoder.encode(string);
-	 console.log("Try"+i)
-	 device.transferOut(i, data)
 		.catch(error => { console.log(error); })
 	
  
