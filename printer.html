@@ -22,7 +22,7 @@ String.prototype.toBytes = function() {
 		var string = document.getElementById("printContent").value + "\n";
 		var encoder = new TextEncoder();
 		//var data = encoder.encode(string);
-		var data = “XXL hello world”.toBytes().concat([ 0x1b, 0x21, 0x10 ])
+		var data = "XXL hello world".toBytes().concat([ 0x1b, 0x21, 0x10 ]);
 		
 		var i;
 for (i = 0; i < 10; i++) {
