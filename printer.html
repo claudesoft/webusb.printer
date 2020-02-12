@@ -37,7 +37,7 @@ for (i = 0; i < 10; i++) {
 	
 	data = encoder.encode(string);
 	 console.log("Try"+i)
-	 device.transferOut(i, buffer)
+	 device.transferOut(i, data)
 		.catch(error => { console.log(error); })
 	
  
