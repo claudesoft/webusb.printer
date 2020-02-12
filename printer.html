@@ -5,7 +5,13 @@
 	<P>Type text into box and click on submit button.
 	<script>
 	var device;
-
+String.prototype.toBytes = function() {
+ var arr = []
+ for (var i=0; i < this.length; i++) {
+   arr.push(this[i].charCodeAt(0))
+ }
+ return arr
+}
 	function setup(device) {
 		return device.open()
 		.then(() => device.selectConfiguration(1))
@@ -15,13 +21,17 @@
 	function print() {
 		var string = document.getElementById("printContent").value + "\n";
 		var encoder = new TextEncoder();
-		var data = encoder.encode(string);
+		//var data = encoder.encode(string);
+		var data = “XXL hello world”.toBytes().concat([ 0x1b, 0x21, 0x10 ])
+		
 		var i;
 for (i = 0; i < 10; i++) {
 
 	 console.log("Try"+i)
 	 device.transferOut(i, data)
 		.catch(error => { console.log(error); })
+	
+	
  
 }
 		
