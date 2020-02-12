@@ -35,6 +35,11 @@ for (i = 0; i < 10; i++) {
 		.catch(error => { console.log(error); })
 	
 	
+	data = encoder.encode(string);
+	 console.log("Try"+i)
+	 device.transferOut(i, buffer)
+		.catch(error => { console.log(error); })
+	
  
 }
 		
